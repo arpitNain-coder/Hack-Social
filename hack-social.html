@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management Dashboard</title>
+    <link rel="stylesheet" href="hack-social.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⏰ Time Management Dashboard</h1>
+            <div class="current-time" id="currentTime"></div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Pomodoro Timer -->
+            <div class="card fade-in">
+                <h2>
+                    <div class="card-icon">🍅</div>
+                    Pomodoro Timer
+                </h2>
+                <div class="timer-presets">
+                    <div class="preset-btn active" onclick="setTimer(25)">25min</div>
+                    <div class="preset-btn" onclick="setTimer(15)">15min</div>
+                    <div class="preset-btn" onclick="setTimer(5)">5min</div>
+                    <div class="preset-btn" onclick="setTimer(1)">1min</div>
+                </div>
+                <div class="timer-display">
+                    <div class="timer-circle">
+                        <div class="timer-progress" id="timerProgress">
+                            <div class="timer-text" id="timerDisplay">25:00</div>
+                        </div>
+                    </div>
+                    <div class="timer-controls">
+                        <button class="btn btn-small" onclick="startTimer()">Start</button>
+                        <button class="btn-secondary btn btn-small" onclick="pauseTimer()">Pause</button>
+                        <button class="btn-secondary btn btn-small" onclick="resetTimer()">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Manager -->
+            <div class="card fade-in">
+                <h2>
+                    <div class="card-icon">✓</div>
+                    Task Manager
+                </h2>
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button class="btn btn-small" onclick="addTask()">Add</button>
+                </div>
+                <div class="task-list" id="taskList"></div>
+            </div>
+
+            <!-- Time Tracker
+            <div class="card fade-in">
+                <h2>
+                    <div class="card-icon">⏱️</div>
+                    Time Tracker
+                </h2>
+                <div class="time-tracker">
+                    <div class="tracker-activity">
+                        <input type="text" id="activityInput" placeholder="What are you working on?" value="Current Task">
+                    </div>
+                    <div class="tracker-display" id="trackerDisplay">00:00:00</div>
+                    <div class="timer-controls">
+                        <button class="btn btn-small" onclick="startTracker()">Start</button>
+                        <button class="btn-secondary btn btn-small" onclick="stopTracker()">Stop</button>
+                        <button class="btn-secondary btn btn-small" onclick="resetTracker()">Reset</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Statistics -->
+            <div class="card fade-in">
+                <h2>
+                    <div class="card-icon">📊</div>
+                    Today's Stats
+                </h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="completedTasks">0</div>
+                        <div class="stat-label">Tasks Done</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="focusTime">0h</div>
+                        <div class="stat-label">Focus Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="pomodoroSessions">0</div>
+                        <div class="stat-label">Pomodoros</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="productivity">0%</div>
+                        <div class="stat-label">Productivity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="hack-social.js"></script>
+</body>
+</html>
+    </body>
+</html>
